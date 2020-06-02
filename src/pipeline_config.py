@@ -57,7 +57,7 @@ pipelines = {
 
 # GridSearch parameters
 gs_params = {
-    'knn' : {'est__n_neighbors':[5,7,10],
+    'knn' : {'est__n_neighbors':[7,10],
             'est__weights':['uniform','distance'],},
 
     'logistic': {'est__C':[1, 100],},
@@ -75,25 +75,25 @@ gs_params = {
 
     'gb': {'est__loss':['deviance'],
             'est__learning_rate': [0.01, 0.1],
-            'est__min_samples_split': np.linspace(0.1, 0.5, 2),
-            'est__min_samples_leaf': np.linspace(0.1, 0.5, 2),
-            'est__max_depth':[3,5],
-            'est__max_features':['log2','sqrt'],
-            'est__criterion': ['friedman_mse',  'mae'],
-            'est__subsample':[0.5, 1.0],
+            # 'est__min_samples_split': np.linspace(0.1, 0.5, 2),
+            # 'est__min_samples_leaf': np.linspace(0.1, 0.5, 2),
+            # 'est__max_depth':[3,5],
+            # 'est__max_features':['log2','sqrt'],
+            # 'est__criterion': ['friedman_mse',  'mae'],
+            'est__subsample':[0.5,],
             'est__n_estimators':[10],},
 
     'mlp': {'est__solver': ['lbfgs'],
-            'est__max_iter': [10000],
-            'est__alpha': 10.0 ** -np.arange(1, 3),
+            # 'est__max_iter': [10000],
+            # 'est__alpha': 10.0 ** -np.arange(1, 3),
             'est__hidden_layer_sizes':np.arange(10, 12),},
 
     'xgb': {'est__n_estimators':[100,500,],
-            'est__max_depth':[6, 8,10],
-            'est__learning_rate':[0.001, 0.01, 0.1, 1],
+            'est__max_depth':[6, 8,],
+            'est__learning_rate':[0.001, 0.01, 0.1],
             'est__min_child_weight': [1,6],},
 
-    'lgbm': {'est__learning_rate':[0.001, 0.01,0.1,1],
+    'lgbm': {'est__learning_rate':[0.001, 0.01,0.1],
             'est__n_estimators':[100, 500,],},
 }
 

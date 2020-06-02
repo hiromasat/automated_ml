@@ -4,7 +4,8 @@ import time
 train_file = '../data/final_hr_analysis_train.csv'
 test_file = '../data/final_hr_analysis_test.csv'
 submit_file_dir = '../submit/'
-submit_file_name = 'submit_tabuchi'+str(time.time()) +'.csv'
+# submit_file_name = 'submit_tabuchi'+str(time.time()) +'.csv'
+submit_file_name = 'submit.csv'
 
 # index
 ID_column = 'index'
@@ -13,7 +14,7 @@ ID_column = 'index'
 target_value = 'left'
     
 # カテゴリ変数をリストで設定
-ohe_columns = ['sales','salary,']
+ohe_columns = ['sales','salary',]
 
 # 除外リスト
 score_reject_items =[ID_column]
