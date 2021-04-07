@@ -1,0 +1,14 @@
+# dataディレクトリ内のtrain, testデータ
+*.csv
+
+# 学習過程で生成されるファイル
+*.pkl
+
+# 学習過程で生成されるcheckpoints
+.ipynb_checkpoints
+
+# macにて自動生成される特定のディレクトリ
+.DS_Store
+
+# キャッシュ
+/src/__pycache__
